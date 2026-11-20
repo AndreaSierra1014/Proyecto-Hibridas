@@ -51,12 +51,6 @@ npx cap open android      # abre Android Studio; botón Run
 Requiere un Mac con Xcode: `npx cap add ios && npx cap sync ios && npx cap open ios`. En Info.plist agregar
 `NSCameraUsageDescription` y `NSPhotoLibraryUsageDescription`. Para la tienda se necesita Apple Developer Program.
 
-## Preparar la publicación en Google Play
-1. Cambiar la URL de la API a la del servidor con HTTPS y quitar `server.cleartext`.
-2. Ícono y pantalla de inicio: `npm i -D @capacitor/assets`, colocar `assets/icon.png` (1024×1024) y `assets/splash.png` (2732×2732), luego `npx capacitor-assets generate --android`.
-3. En `android/app/build.gradle` definir `versionCode` (entero que sube en cada envío) y `versionName`.
-4. Android Studio: *Build > Generate Signed Bundle / APK > Android App Bundle*. Crear el keystore y guardarlo con su contraseña en un lugar seguro: sin él no se pueden publicar actualizaciones.
-5. Play Console: crear la app, completar ficha, política de privacidad, clasificación de contenido y seguridad de datos; subir el `.aab` a pruebas internas y luego a producción.
 
 ## Cuentas y datos de prueba
 Los datos se guardan en `backend/db.json` (se crea al iniciar la API). Borrar ese archivo restaura los datos iniciales.
