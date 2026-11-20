@@ -52,5 +52,3 @@ Requiere un Mac con Xcode: `npx cap add ios && npx cap sync ios && npx cap open 
 `NSCameraUsageDescription` y `NSPhotoLibraryUsageDescription`. Para la tienda se necesita Apple Developer Program.
 
 
-## Cuentas y datos de prueba
-Los datos se guardan en `backend/db.json` (se crea al iniciar la API). Borrar ese archivo restaura los datos iniciales.
